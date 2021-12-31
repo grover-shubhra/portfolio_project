@@ -25,7 +25,7 @@ SECRET_KEY = '-7h$ag82t(ybe5lfx928c631qw3o)x+22z-8-@3hs0pxob^5t9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shubhra-portfolio-env.eba-2xpzpqgy.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
@@ -123,7 +123,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'portfolio/static/')
+]
+
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
