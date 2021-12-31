@@ -25,7 +25,7 @@ SECRET_KEY = '-7h$ag82t(ybe5lfx928c631qw3o)x+22z-8-@3hs0pxob^5t9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shubhra-portfolio-env.eba-2xpzpqgy.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -134,3 +134,8 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 MEDIA_URL = '/media/'
+
+try:
+    from local_settings import *
+except ImportError:
+    pass 
